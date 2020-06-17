@@ -14,7 +14,7 @@ tnn.ModelFactory = class {
             const line = text.split('\n').shift().trim();
             if (line.startsWith('"') && line.endsWith('"')) {
                 const header = line.replace(/(^")|("$)/g, '').split(',').shift().trim().split(' ');
-                if (header.length >= 3 || (header.length >= 4 && header[3] === '4206624770')) {
+                if (header.length === 3 || (header.length >= 4 && header[3] === '4206624770')) {
                     return true;
                 }
             }
